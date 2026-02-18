@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": "prod_001",
+      "name": "SILVER PHANTOM",
+      "price": "$125,000",
+      "image_url": "https://skoop-general.s3.us-east-1.amazonaws.com/n8n_image_gen/luxury_sedan_silver-1771396491756.png",
+      "meta": "0-60 in 3.2s | 650 HP | V8 TWIN TURBO"
+    },
+    {
+      "id": "prod_002",
+      "name": "CRIMSON VELOCITY",
+      "price": "$2,400,000",
+      "image_url": "https://skoop-general.s3.us-east-1.amazonaws.com/n8n_image_gen/supercar_red-1771396506298.png",
+      "meta": "TOP SPEED 220 MPH | CARBON CHASSIS | HYBRID"
+    },
+    {
+      "id": "prod_003",
+      "name": "MIDNIGHT OBSIDIAN",
+      "price": "$185,000",
+      "image_url": "https://skoop-general.s3.us-east-1.amazonaws.com/n8n_image_gen/luxury_suv_black-1771396520740.png",
+      "meta": "ALL-TERRAIN LUXURY | ARMORED | V12 ENGINE"
+    }
+  ]
+}

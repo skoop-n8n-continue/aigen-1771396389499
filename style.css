@@ -1,0 +1,196 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #050505;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+#scene {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+/* BACKGROUND */
+#background {
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  background-image: url("https://skoop-general.s3.us-east-1.amazonaws.com/n8n_image_gen/luxury_showroom_bg-1771396452931.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  filter: brightness(0.6) contrast(1.2);
+}
+
+/* ATMOSPHERE */
+#fog-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.4;
+  mix-blend-mode: screen;
+}
+
+#spotlight {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0) 50%);
+  z-index: 2;
+  opacity: 0; /* Animated */
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+#foreground-dust {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.07%22/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* PRODUCT STAGE */
+#product-stage {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  perspective: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#product-anchor {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.product-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(0);
+  width: 1200px; /* Reduced from full width to allow breathing room */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Start hidden */
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  max-height: 800px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+  will-change: transform, opacity, filter;
+}
+
+/* UI LAYER */
+#ui-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  padding: 60px 100px;
+  pointer-events: none;
+}
+
+#brand-header {
+  position: absolute;
+  top: 60px;
+  left: 100px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  opacity: 0.7;
+}
+
+.brand-line {
+  width: 40px;
+  height: 2px;
+  background: #fff;
+  display: block;
+}
+
+.brand-text {
+  font-family: "Syncopate", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  color: #fff;
+}
+
+#product-info-container {
+  position: absolute;
+  bottom: 80px;
+  left: 100px;
+  text-align: left;
+}
+
+#product-name {
+  font-family: "Cinzel", serif;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#product-meta-line {
+  width: 0%; /* Animated */
+  height: 1px;
+  background: rgba(255,255,255,0.5);
+  margin: 20px 0;
+}
+
+#product-details {
+  font-family: "Syncopate", sans-serif;
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#product-separator {
+  color: #00b7af; /* Accent color */
+}
+
+/* VIGNETTE */
+#vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, transparent 40%, #000 120%);
+  z-index: 40;
+  pointer-events: none;
+}
+

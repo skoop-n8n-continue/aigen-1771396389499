@@ -1,0 +1,36 @@
+{
+  "template_id": "midnight-showroom-v1",
+  "name": "Midnight Showroom Reveal",
+  "created_at": "2026-05-20T10:00:00Z",
+  "version": "1.0.0",
+  "theme": {
+    "style": "cinematic_luxury",
+    "description": "Dark, moody showroom with spotlight reveals and volumetric fog",
+    "colors": ["#000000", "#ffffff", "#00b7af"],
+    "mood": "expensive, mysterious, powerful",
+    "tags": ["automotive", "luxury", "dark", "cinematic"]
+  },
+  "capabilities": {
+    "products_per_cycle": 1,
+    "cycles_through_all_products": true
+  },
+  "animation": {
+    "duration": 8,
+    "fps": 30,
+    "entrance_duration": 2,
+    "idle_duration": 4,
+    "exit_duration": 2,
+    "uses_plugins": ["GSAP Core"]
+  },
+  "assets": {
+    "background": "https://skoop-general.s3.us-east-1.amazonaws.com/n8n_image_gen/luxury_showroom_bg-1771396452931.png",
+    "overlays": ["fog_canvas"],
+    "icons": [],
+    "fonts": ["Cinzel", "Montserrat", "Syncopate"]
+  },
+  "technical": {
+    "resolution": "1920x1080",
+    "performance": "optimized",
+    "browser_compatibility": "chrome_latest"
+  }
+}

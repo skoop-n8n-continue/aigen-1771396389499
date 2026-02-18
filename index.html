@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Showroom Template</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="scene">
+    <!-- Background Layer -->
+    <div id="background"></div>
+    
+    <!-- Atmospheric Layer (Fog/Smoke) -->
+    <canvas id="fog-canvas"></canvas>
+
+    <!-- Spotlight Effect -->
+    <div id="spotlight"></div>
+
+    <!-- Product Container (3D Stage) -->
+    <div id="product-stage">
+      <div id="product-anchor">
+        <!-- Products injected here -->
+      </div>
+    </div>
+
+    <!-- Foreground Atmosphere -->
+    <div id="foreground-dust"></div>
+
+    <!-- UI Layer -->
+    <div id="ui-layer">
+      <div id="brand-header">
+        <span class="brand-line"></span>
+        <span class="brand-text">THE COLLECTION</span>
+      </div>
+
+      <div id="product-info-container">
+        <h1 id="product-name">LOADING</h1>
+        <div id="product-meta-line"></div>
+        <div id="product-details">
+          <span id="product-price"></span>
+          <span id="product-separator">///</span>
+          <span id="product-specs"></span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Vignette -->
+    <div id="vignette"></div>
+  </div>
+
+  <script src="animation.js"></script>
+</body>
+</html>
